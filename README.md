@@ -36,9 +36,9 @@ With Tiger your LLM agents write codes and run, uses search engines, view your c
 
 In this way the Tiger project philosophy is using AI knowladge to generate action and supporting with standart infrastructures. We aim to make:
 
-- **Utility point for tools for agents in any framework that have function call mechanism**
-- **Great community for great tool support in different technologies and sources**
-- **Free, Open and MIT licenced tool library for AI agent ecosystem**
+- **Utility point** for tools for agents in any framework that have function call mechanism
+- **Great community for great tools** support in different technologies and sources
+- **Free, Open and MIT** licenced tool library for AI agent ecosystem
 
 
 <br>
