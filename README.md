@@ -29,7 +29,7 @@
 Tiger is an community project for developing reusable and integrated tool ecosystem for LLM Agent Revolution. Tiger uses Upsonic to storing tools in isolation and automaticaly generated documents. You can create your own tiger for your agents or you can use the community maintained public and strongest Tiger 🐅.
 
 
-Tiger inspired from [Neuralink](https://github.com/OpenBMB/BMTools) and and provides AI computer interface with its threads that connected to LLM interface. Tiger gives an opportunity to AI to use computer by thinking.
+Tiger inspired from [Neuralink](https://neuralink.com/) and and provides AI computer interface with its threads that connected to LLM interface. Tiger gives an opportunity to AI to use computer by thinking.
 
 With Tiger your LLM agents write codes and run, uses search engines, view your calendar, use your mouse and keyboard. Saying somethink in your headphones and anythink that thinked by your agent. Tiger will transform this thinks to real actions. In this way the Tiger project philosophy is using AI knowladge to generate action and supporting with standart infrastructures. We aim to make:
 
