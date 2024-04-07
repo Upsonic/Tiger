@@ -1,0 +1,37 @@
+name: Upload
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+
+  ubuntu:
+    runs-on: ${{ matrix.os }}
+    environment: UNIT Tests
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: '3.8'
+    steps:
+    - uses: nschloe/action-cached-lfs-checkout@v1
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip3 install -r requirements.txt
+
+    - name: Upload
+      env:
+        API_URL: ${{ secrets.API_URL }}
+        ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
+      run: |
+        python3 tiger/public_tiger.py
+
+

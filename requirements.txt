@@ -1,0 +1,7 @@
+importlib_metadata
+IPython
+google==3.0.0
+beautifulsoup4==4.12.3
+requests
+python-dotenv==1.0.0
+upsonic
