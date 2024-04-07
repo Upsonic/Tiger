@@ -62,31 +62,14 @@ We are working on Upsonic and the tools that inside the `tools` folder is sendin
 
 - Interpreter
   - python
-
-- Time
-  - currently_date_time
-  - time_of_an_City
-  - sleep
+    - check_package
+    - execute
+    - install_package
 
 - Search
-  - Engines
-    - duckduckgo
+  - google
+  - read_website
 
-- Translate
-  - eng_to_ge
-  - ge_to_eng
-
-- Hardware
-  - Monitor
-    - screenshot_to_file
-  - Mouse
-    - move_to_xy
-  - Keyboard
-    - send_char
-  - Speaker
-    - text_to_speech
-  - Microphone
-    - speech_to_text
 
 If you want to add functions to public and strongest Tiger you can see to [Adding Tools](#adding-tools) section.
 
@@ -127,7 +110,7 @@ Tiger is able to make a collabration for sharing tools with LangChain agents wit
 ```python
 # Geting the tiger tools about interpreter.python
 from upsonic import Tiger
-tools = Tiger.langchain(group="interpreter.python") # group=None for geting alls
+tools = Tiger().langchain()
 
 
 
@@ -184,14 +167,14 @@ user_proxy = autogen.UserProxyAgent(
 
 # Geting the tiger tools about interpreter.python
 from upsonic import Tiger
-Tiger.autogen(chatbot, userproxy, group="interpreter.python") # group=None for geting alls
+Tiger().autogen(chatbot, userproxy)
 
 
 
 # Asking sleep 2 second
 user_proxy.initiate_chat(
         chatbot,
-        message="Please sleep 2 second",
+        message="What is Upsonic.co",
     )
 ```
 
