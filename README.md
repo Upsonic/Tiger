@@ -70,6 +70,7 @@ We are working on Upsonic and the tools that inside the `tools` folder is sendin
 
 - Search
   - google
+  - duckduckgo
   - read_website
 
 - System
