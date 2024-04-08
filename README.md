@@ -72,6 +72,10 @@ We are working on Upsonic and the tools that inside the `tools` folder is sendin
   - google
   - read_website
 
+- System
+  - os_name
+  - architecture
+  - python_version
 
 If you want to add functions to public and strongest Tiger you can see to [Adding Tools](#adding-tools) section.
 
