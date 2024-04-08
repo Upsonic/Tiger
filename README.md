@@ -181,8 +181,44 @@ user_proxy.initiate_chat(
 ```
 
 ## Adding Tools
+Tiger project is open to any contribution for public tiger, also in the bottom we have another way to create your own, offline tiger. For adding the public tiger you should create a pull request with your new tool.
+
+1) Create a python file in `tiger/tools` section.
+for ex: `tiger/tools/interpreter/python/execute.py`
+
+2) Write your function in this format
+```python
+#imports
+
+def my_function(query:str) -> str:
+    return query + " hi"
+
+
+tool_name = "test.my_function"
+tool_obj = my_function
+tool_requirements = ["beautifulsoup4==4.12.3"]
+```
+
+
+3) Create the pull request. When its merged its will be available at public Tiger and dashboard.
+
 
 ## Creating your Own Tiger
+For creating your own tiger you should install a Upsonic On-Prem docker container. Its will give a dashboard for viewing your own tools and will make documentation automatic. After that you should use the Upsonic Client to connect your On-Prem for this you should get the connection code from your dashboard and finaly you use the tiger function in upsonic client.
+
+[Installation document](https://docs.upsonic.co/on-prem/getting_started/install_on_prem)
+
+```python
+#from upsonic import Tiger
+#Tiger().autogen(chatbot, userproxy)
+
+# to
+
+#Your Upsonic Connection Code
+
+upsonic.autogen(chatbot, userproxy)
+```
+
 
 
 
