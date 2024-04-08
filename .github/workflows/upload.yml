@@ -1,6 +1,9 @@
 name: Upload
 
 on:
+  push:
+    paths:
+      - 'tiger/tools/**'
   workflow_dispatch:
 
 jobs:
