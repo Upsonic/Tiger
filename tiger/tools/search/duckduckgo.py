@@ -8,7 +8,9 @@ def search(query: str, max_number: int = 20) -> list:
     :param max_number: int:  (Default value = 20)
 
     """
-    return [result["href"] for result in DDGS().text(query, max_results=max_number)]
+    return [
+        result["href"] for result in DDGS().text(query, max_results=max_number)
+    ]
 
 
 tool_name = "system.duckduckgo"
