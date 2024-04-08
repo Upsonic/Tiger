@@ -19,7 +19,6 @@
   <a href="https://huggingface.co/spaces/congxin95/BMTools-demo">Public Dashboard</a> •
 </p>
 
-
 <br>
 <div align="center">
 <img src="assets/overview.png" width="700px">
@@ -27,7 +26,6 @@
 <br>
 
 Tiger is an community project for developing reusable and integrated tool ecosystem for LLM Agent Revolution. Tiger uses Upsonic to storing tools in isolation and automaticaly generated documents. You can create your own tiger for your agents or you can use the community maintained public and strongest Tiger 🐅.
-
 
 Tiger inspired from [Neuralink](https://neuralink.com/) and and provides AI computer interface with its threads that connected to LLM interface. Tiger gives an opportunity to AI to use computer by thinking.
 
@@ -37,17 +35,14 @@ With Tiger your LLM agents write codes and run, uses search engines, view your c
 - **Great community for great tools** support in different technologies and sources
 - **Free, Open and MIT** licenced tool library for AI agent ecosystem
 
-
 <br>
 <div align="center">
 <img src="assets/question_answer_2.png" width="700px">
 </div>
 <br>
 
-
-
-
 # Setup
+
 Tiger projects have a general usage public library at [tiger.upsonic.co](https://tiger.upsonic.co). Its include the tools that in `tools` library. For usage this you can use the standart connection that in upsonic python library. After installing the `upsonic` library we will use the Tiger object wand integrate to your agents.
 
 - Tiger requires equal or higher python version to 3.8
@@ -57,18 +52,20 @@ pip3 install upsonic
 ```
 
 ## Currently Tools
+
 We are working on Upsonic and the tools that inside the `tools` folder is sending to public tiger in each release. We are aiming to create tools without any api key and just like normal human events like searching on google with mouse, keyboard and browser.
 
-
 - Interpreter
+
   - python
     - check_package
     - execute
     - install_package
   - sh
-    - execute 
+    - execute
 
 - Search
+
   - google
   - duckduckgo
   - read_website
@@ -80,14 +77,14 @@ We are working on Upsonic and the tools that inside the `tools` folder is sendin
 
 If you want to add functions to public and strongest Tiger you can see to [Adding Tools](#adding-tools) section.
 
-
 ## Public Dashboard
+
 For the public Tiger you can see the functions and their documentations and readmes in [tiger.upsonic.co](https://tiger.upsonic.co). You can use this place for documentation also.
 
 **Auth**
+
 - username: tiger
 - password: tiger
-
 
 <br>
 <div align="center">
@@ -95,11 +92,12 @@ For the public Tiger you can see the functions and their documentations and read
 </div>
 <br>
 
-
 ## Documentation of Tiger Tools
+
 Thanks to Upsonic we just write the codes and its gives us an storage system with detailed documentation and cpu ram usage for each function. Also you can make search and use functions in your other projects with connection code.
 
 **Auth**
+
 - username: tiger
 - password: tiger
 
@@ -110,9 +108,8 @@ Thanks to Upsonic we just write the codes and its gives us an storage system wit
 <br>
 
 # LangChain Integration
+
 Tiger is able to make a collabration for sharing tools with LangChain agents with this your agents will able to use Tiger functions. In this example we are asking for an multiplation question and the agent will use the tiger `interpreter.python` module and after that its write a python code and tiger will give the result in behind. With this agent will able to make mathematical operations in just two lines of code.
-
-
 
 ```python
 # Geting the tiger tools about interpreter.python
@@ -137,8 +134,8 @@ agent_executor.invoke({"input": "What is the result of 15231 * 64231"})
 
 ```
 
-
 # AutoGen Integration
+
 Tiger is also have a integration with AutoGen agents. You can put a tiger to your AutoGen agents. In this examples we will use the 'interpreter.python' module and with this your autogen agent able to run and view result of python codes. With this your agent will able to wait 2 second as we request.
 
 ```python
@@ -186,12 +183,14 @@ user_proxy.initiate_chat(
 ```
 
 ## Adding Tools
+
 Tiger project is open to any contribution for public tiger, also in the bottom we have another way to create your own, offline tiger. For adding the public tiger you should create a pull request with your new tool.
 
-1) Create a python file in `tiger/tools` section.
-for ex: `tiger/tools/interpreter/python/execute.py`
+1. Create a python file in `tiger/tools` section.
+   for ex: `tiger/tools/interpreter/python/execute.py`
 
-2) Write your function in this format
+2. Write your function in this format
+
 ```python
 #imports
 
@@ -204,11 +203,10 @@ tool_obj = my_function
 tool_requirements = ["beautifulsoup4==4.12.3"]
 ```
 
-
-3) Create the pull request. When its merged its will be available at public Tiger and dashboard.
-
+3. Create the pull request. When its merged its will be available at public Tiger and dashboard.
 
 ## Creating your Own Tiger
+
 For creating your own tiger you should install a Upsonic On-Prem docker container. Its will give a dashboard for viewing your own tools and will make documentation automatic. After that you should use the Upsonic Client to connect your On-Prem for this you should get the connection code from your dashboard and finaly you use the tiger function in upsonic client.
 
 [Installation document](https://docs.upsonic.co/on-prem/getting_started/install_on_prem)
@@ -223,9 +221,6 @@ For creating your own tiger you should install a Upsonic On-Prem docker containe
 
 upsonic.autogen(chatbot, userproxy)
 ```
-
-
-
 
 ## Star History
 
