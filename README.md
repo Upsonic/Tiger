@@ -65,6 +65,8 @@ We are working on Upsonic and the tools that inside the `tools` folder is sendin
     - check_package
     - execute
     - install_package
+  - sh
+    - execute 
 
 - Search
   - google
