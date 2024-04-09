@@ -1,21 +1,26 @@
-from tinydb import TinyDB, Query
 import inspect
 import os
+
 import upsonic
+from tinydb import Query
+from tinydb import TinyDB
 
 
+def pull(knowledge_name: str) -> str:
+    """
 
-def pull(knowledge_name:str) -> str:
-    folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),  "upsonic_tiger_knowledge.json")
+    :param knowledge_name: str:
+
+    """
+    folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
+                          "upsonic_tiger_knowledge.json")
     db = TinyDB(folder)
     Knowledge = Query()
     result = db.search(Knowledge.knowledge_name == knowledge_name)
     if result:
-        return result[0]['description']
+        return result[0]["description"]
     else:
         return None
-
-
 
 
 tool_name = "knowledge.pull"
