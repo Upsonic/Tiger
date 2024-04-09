@@ -10,7 +10,7 @@ def pull(knowledge_name: str) -> str:
     """
 
     :param knowledge_name: str:
-    :param knowledge_name: str: 
+    :param knowledge_name: str:
 
     """
     folder = os.path.join(
