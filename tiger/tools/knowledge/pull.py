@@ -12,9 +12,8 @@ def pull(knowledge_name: str) -> str:
     :param knowledge_name: str:
 
     """
-    folder = os.path.join(
-        os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
-    )
+    folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
+                          "upsonic_tiger_knowledge.json")
     db = TinyDB(folder)
     Knowledge = Query()
     result = db.search(Knowledge.knowledge_name == knowledge_name)
