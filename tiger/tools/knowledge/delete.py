@@ -1,7 +1,8 @@
-from tinydb import TinyDB, Query
 import inspect
 import os
+
 import upsonic
+from tinydb import Query, TinyDB
 
 
 def delete(knowledge_name: str) -> bool:

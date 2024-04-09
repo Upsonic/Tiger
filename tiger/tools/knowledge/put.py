@@ -1,7 +1,8 @@
-from tinydb import TinyDB, Query
 import inspect
 import os
+
 import upsonic
+from tinydb import Query, TinyDB
 
 
 def put(knowledge_name: str, description: str) -> bool:
