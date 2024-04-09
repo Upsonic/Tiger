@@ -50,7 +50,7 @@ for each in get_file_dict(directory).values():
     tool_requirements = each["tool_requirements"]
 
     if tool_name in currently_index:
-        currently_index.delete(tool_name)
+        currently_index.remove(tool_name)
 
     tiger_client.set(tool_name, tool_obj)
     tiger_client.clear_requirements(tool_name)
