@@ -3,8 +3,10 @@ import inspect
 import os
 import upsonic
 
+
 def reset() -> None:
-    folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),  "upsonic_tiger_knowledge.json")
+    folder = os.path.join(os.path.dirname(
+        inspect.getfile(upsonic)),  "upsonic_tiger_knowledge.json")
     db = TinyDB(folder)
     try:
         # Empty the database
