@@ -6,6 +6,11 @@ from tinydb import Query, TinyDB
 
 
 def delete(knowledge_name: str) -> bool:
+    """
+
+    :param knowledge_name: str: 
+
+    """
     folder = os.path.join(
         os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
     )

@@ -6,6 +6,7 @@ from tinydb import Query, TinyDB
 
 
 def reset() -> None:
+    """ """
     folder = os.path.join(
         os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
     )

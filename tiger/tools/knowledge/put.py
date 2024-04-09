@@ -6,6 +6,12 @@ from tinydb import Query, TinyDB
 
 
 def put(knowledge_name: str, description: str) -> bool:
+    """
+
+    :param knowledge_name: str: 
+    :param description: str: 
+
+    """
     folder = os.path.join(
         os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
     )
