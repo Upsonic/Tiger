@@ -10,6 +10,8 @@ def put(knowledge_name: str, description: str) -> bool:
 
     :param knowledge_name: str:
     :param description: str:
+    :param knowledge_name: str: 
+    :param description: str: 
 
     """
     folder = os.path.join(

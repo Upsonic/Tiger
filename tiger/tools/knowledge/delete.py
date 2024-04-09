@@ -9,6 +9,7 @@ def delete(knowledge_name: str) -> bool:
     """
 
     :param knowledge_name: str:
+    :param knowledge_name: str: 
 
     """
     folder = os.path.join(
