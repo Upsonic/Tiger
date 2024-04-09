@@ -2,8 +2,7 @@ import inspect
 import os
 
 import upsonic
-from tinydb import Query
-from tinydb import TinyDB
+from tinydb import Query, TinyDB
 
 
 def put(knowledge_name: str, description: str) -> bool:
