@@ -2,7 +2,8 @@ import inspect
 import os
 
 import upsonic
-from tinydb import Query, TinyDB
+from tinydb import Query
+from tinydb import TinyDB
 
 
 def index() -> list:
