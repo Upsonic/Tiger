@@ -41,14 +41,22 @@ directory = os.path.join(os.path.dirname(__file__), "tools")
 import inspect
 import dill
 
+
+currently_index = tiger_client.get_all()
+
 for each in get_file_dict(directory).values():
     tool_name = each["tool_name"]
     tool_obj = each["tool_obj"]
     tool_requirements = each["tool_requirements"]
 
-
+    if tool_name in currently_index:
+        currently_index.delete(tool_name)
 
     tiger_client.set(tool_name, tool_obj)
     tiger_client.clear_requirements(tool_name)
     [tiger_client.add_requirement(tool_name, requirement) for requirement in tool_requirements]
     print(tool_name)
+
+
+for each in currently_index:
+    tiger_client.delete(each)
