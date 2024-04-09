@@ -5,13 +5,14 @@ import upsonic
 
 
 def pull(knowledge_name: str) -> str:
-    folder = os.path.join(os.path.dirname(
-        inspect.getfile(upsonic)),  "upsonic_tiger_knowledge.json")
+    folder = os.path.join(
+        os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
+    )
     db = TinyDB(folder)
     Knowledge = Query()
     result = db.search(Knowledge.knowledge_name == knowledge_name)
     if result:
-        return result[0]['description']
+        return result[0]["description"]
     else:
         return None
 

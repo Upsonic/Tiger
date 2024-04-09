@@ -5,8 +5,9 @@ import upsonic
 
 
 def delete(knowledge_name: str) -> bool:
-    folder = os.path.join(os.path.dirname(
-        inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json")
+    folder = os.path.join(
+        os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
+    )
     db = TinyDB(folder)
     try:
         Knowledge = Query()
