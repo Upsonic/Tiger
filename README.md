@@ -80,6 +80,13 @@ We are working on Upsonic and the tools that inside the `tools` folder is sendin
   - architecture
   - python_version
 
+- Knowledge
+  - put
+  - pull
+  - delete
+  - index
+  - reset
+
 If you want to add functions to public and strongest Tiger you can see to [Adding Tools](#adding-tools) section.
 
 
