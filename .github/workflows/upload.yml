@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'tiger/tools/**'
+      - 'tiger/public_tiger.py'
     branches:
       - master
   workflow_dispatch:
