@@ -8,6 +8,7 @@
 
 <p align="center">
 <b>Integrations:</b>
+  <a href="#crewai-integration">crewAI Integration</a> •
   <a href="#langchain-integration">LangChain Integration</a> •
   <a href="#autogen-integration">AutoGen Integration</a> •
 </p>
@@ -119,9 +120,54 @@ Thanks to Upsonic we just write the codes and its gives us an storage system wit
 </div>
 <br>
 
+# crewAI Integration
+Tiger project aim is being available for most popular agent framworks like `crewAI`. In this example you can see the easiest tool integration for an AI agent. We are asking for who is Onur Atakan ULUSOY and waits.
+
+```python
+# Geting the tiger tools about interpreter.python
+from upsonic import Tiger
+tools = Tiger().crewai()
+
+
+
+from langchain_openai import ChatOpenAI
+llm = ChatOpenAI(model="gpt-4-0125-preview", api_key=OPENAI_API_KEY)
+
+
+
+from crewai import Agent, Task, Crew, Process
+
+researcher = Agent(
+  role='Senior Research Analyst',
+  goal='Uncover cutting-edge developments in AI and data science',
+  verbose=True,
+  allow_delegation=False,
+  tools=tools,
+  llm=llm
+)
+
+
+task1 = Task(
+  description="""Who is Onur Atakan ULUSOY""",
+  expected_output="Full analysis report of Onur Atakan ULUSOY and putting the report to knowledge",
+  agent=researcher
+)
+
+
+crew = Crew(
+  agents=[researcher],
+  tasks=[task1, task2, task3],
+  verbose=2,
+)
+
+
+result = crew.kickoff()
+
+```
+
 # LangChain Integration
 
-Tiger is able to make a collabration for sharing tools with LangChain agents with this your agents will able to use Tiger functions. In this example we are asking for an multiplation question and the agent will use the tiger `interpreter.python` module and after that its write a python code and tiger will give the result in behind. With this agent will able to make mathematical operations in just two lines of code.
+Tiger is able to make a collabration for sharing tools with LangChain agents with this your agents will able to use Tiger functions. In this example we are asking for an multiplation question and the agent will use the tiger  and after that its write a python code and tiger will give the result in behind. With this agent will able to make mathematical operations in just two lines of code.
 
 ```python
 # Geting the tiger tools about interpreter.python
@@ -135,7 +181,7 @@ from langchain_openai import ChatOpenAI
 from langchain import hub
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 
-llm = ChatOpenAI(model="gpt-4", api_key="OPENAI_API_KEY")
+llm = ChatOpenAI(model="gpt-4-0125-preview", api_key=OPENAI_API_KEY)
 prompt = hub.pull("hwchase17/openai-functions-agent")
 agent = create_openai_functions_agent(llm, tools, prompt)
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
@@ -157,8 +203,8 @@ import autogen
 
 config_list = [
     {
-        'model': 'gpt-4',
-        'api_key': 'OPENAI_API_KEY',
+        'model': 'gpt-4-0125-preview',
+        'api_key': OPENAI_API_KEY,
     },
 ]
 
