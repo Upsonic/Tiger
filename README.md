@@ -124,7 +124,7 @@ Thanks to Upsonic we just write the codes and its gives us an storage system wit
 Tiger project aim is being available for most popular agent framworks like `crewAI`. In this example you can see the easiest tool integration for an AI agent. We are asking for who is Onur Atakan ULUSOY and waits.
 
 ```python
-# Geting the tiger tools about interpreter.python
+# Geting the tiger tools
 from upsonic import Tiger
 tools = Tiger().crewai()
 
@@ -170,7 +170,7 @@ result = crew.kickoff()
 Tiger is able to make a collabration for sharing tools with LangChain agents with this your agents will able to use Tiger functions. In this example we are asking for an multiplation question and the agent will use the tiger  and after that its write a python code and tiger will give the result in behind. With this agent will able to make mathematical operations in just two lines of code.
 
 ```python
-# Geting the tiger tools about interpreter.python
+# Geting the tiger tools
 from upsonic import Tiger
 tools = Tiger().langchain()
 
@@ -227,7 +227,7 @@ user_proxy = autogen.UserProxyAgent(
 
 
 
-# Geting the tiger tools about interpreter.python
+# Geting the tiger tools
 from upsonic import Tiger
 Tiger().autogen(chatbot, userproxy)
 
