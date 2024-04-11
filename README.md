@@ -26,25 +26,20 @@
 </div>
 <br>
 
-# What is Tiger ?
+# What is Tiger?
 
-Tiger is an community project for developing reusable and integrated tool ecosystem for LLM Agent Revolution. Tiger uses Upsonic to storing tools in isolation and automaticaly generated documents. You can create your own tiger for your agents or you can use the community maintained public and strongest Tiger 🐅.
+Tiger is a community-driven project developing a reusable and integrated tool ecosystem for LLM Agent Revolution. It utilizes Upsonic for isolated tool storage, profillibg and for the automatic generation of documents. With Tiger, you can create a customized environment for your agents or leverage the robust and publicly maintained Tiger 🐅 curated by the community itself.
 
 ## Details
 
-Tiger inspired from [Neuralink](https://neuralink.com/) and and provides AI computer interface with its threads that connected to LLM interface. Tiger gives an opportunity to AI to use computer by thinking.
+Tiger, influenced by [Neuralink](https://neuralink.com/), provides an AI-oriented computer interface with threads connected to the LLM interface. It offers a platform for AIs to control a computer by simply 'thinking'.
 
-With Tiger your LLM agents write codes and run, uses search engines, view your calendar, use your mouse and keyboard. Saying somethink in your headphones and anythink that thinked by your agent. Tiger will transform this thinks to real actions. In this way the Tiger project philosophy is using AI knowladge to generate action and supporting with standart infrastructures. We aim to make:
+With Tiger, your LLM agents can write and execute code, use search engines, manage your calendar, control your mouse and keyboard, speak into your headphones, and much more. Essentially, anything conceived by your agent, Tiger will transform into concrete actions. This embodies the core philosophy of the Tiger project – to harness AI intelligence to generate tangible actions and support standard infrastructures. Our goals include:
 
-- **Utility point** for tools for agents in any framework that have function call mechanism
-- **Great community for great tools** support in different technologies and sources
-- **Free, Open and MIT** licenced tool library for AI agent ecosystem
+- Providing a **Utility point** for agent tools across any framework that utilizes a function call mechanism,
+- Building and nurturing a **Community of tool support** across diverse technologies and disciplines,
+- Developing a **Free, Open and MIT** licensed tool library for the AI agent ecosystem.
 
-<br>
-<div align="center">
-<img src="assets/question_answer_2.png" width="700px">
-</div>
-<br>
 
 # Setup
 
