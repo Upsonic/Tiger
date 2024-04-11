@@ -22,7 +22,7 @@
 
 <br>
 <div align="center">
-<img src="assets/overview.png" width="700px">
+<img src="assets/overview.png" >
 </div>
 <br>
 
