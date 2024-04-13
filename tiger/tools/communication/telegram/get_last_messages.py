@@ -9,7 +9,7 @@ def get_last_messages(number: str, limit=100):
 
     :param number: str:
     :param limit: Default value = 100)
-    :param number: str: 
+    :param number: str:
 
     """
     import nest_asyncio
