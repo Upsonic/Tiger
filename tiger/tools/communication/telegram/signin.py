@@ -1,14 +1,19 @@
+import asyncio
+import time
 
 from telethon.sync import TelegramClient
-import time
-import asyncio
+
 
 def signin():
+    """ """
     import nest_asyncio
+
     nest_asyncio.apply()
 
     async def send_message():
-        async with TelegramClient("upsonic_tiger", 21659296, '7d0ebd20538d88ab0629eb926acb08f7') as client:
+        async with TelegramClient(
+                "upsonic_tiger", 21659296,
+                "7d0ebd20538d88ab0629eb926acb08f7") as client:
             message = await client.send_message("me", "upsonic_tiger_test")
             await time.sleep(2)
             await message.delelete
