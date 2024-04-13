@@ -5,10 +5,13 @@ import asyncio
 
 def get_last_dialogs(limit=100):
     import nest_asyncio
+
     nest_asyncio.apply()
 
     async def fetch_recent_chats(limit):
-        async with TelegramClient("upsonic_tiger", 21659296, '7d0ebd20538d88ab0629eb926acb08f7') as client:
+        async with TelegramClient(
+            "upsonic_tiger", 21659296, "7d0ebd20538d88ab0629eb926acb08f7"
+        ) as client:
             recent_chats = await client.get_dialogs(limit=limit)
             chat_names = {}
             for chat in recent_chats:
@@ -23,8 +26,12 @@ def get_last_dialogs(limit=100):
                 if chat.is_group:
                     number = chat.entity.id
                     type_of_entity = "group"
-                chat_names[chat.id] = {"number": number, "title": chat.name or chat.title,
-                                       "type_of_entity": type_of_entity, "unread_count": chat.unread_count}
+                chat_names[chat.id] = {
+                    "number": number,
+                    "title": chat.name or chat.title,
+                    "type_of_entity": type_of_entity,
+                    "unread_count": chat.unread_count,
+                }
             return chat_names
 
     chats = asyncio.run(fetch_recent_chats(limit=limit))
