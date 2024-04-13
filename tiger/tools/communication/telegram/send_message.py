@@ -7,8 +7,8 @@ from telethon.sync import TelegramClient
 def send_message(number: str, message: str) -> str:
     """
 
-    :param number: str: 
-    :param message: str: 
+    :param number: str:
+    :param message: str:
 
     """
     import nest_asyncio
