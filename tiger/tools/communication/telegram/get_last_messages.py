@@ -1,6 +1,7 @@
-from telethon.sync import TelegramClient
-import time
 import asyncio
+import time
+
+from telethon.sync import TelegramClient
 
 
 def get_last_messages(number: str, limit=100):
