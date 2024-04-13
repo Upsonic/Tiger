@@ -5,6 +5,12 @@ from telethon.sync import TelegramClient
 
 
 def get_last_messages(number: str, limit=100):
+    """
+
+    :param number: str: 
+    :param limit:  (Default value = 100)
+
+    """
     import nest_asyncio
 
     nest_asyncio.apply()

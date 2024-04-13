@@ -5,6 +5,7 @@ from telethon.sync import TelegramClient
 
 
 def signin():
+    """ """
     import nest_asyncio
 
     nest_asyncio.apply()
