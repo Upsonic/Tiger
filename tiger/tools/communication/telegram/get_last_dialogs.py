@@ -13,7 +13,7 @@ def get_last_dialogs(limit=100):
             chat_names = {}
             for chat in recent_chats:
                 number = ""
-                type_of_entity=""
+                type_of_entity = ""
                 if chat.is_user:
                     number = chat.entity.phone
                     type_of_entity = "user"
@@ -23,7 +23,8 @@ def get_last_dialogs(limit=100):
                 if chat.is_group:
                     number = chat.entity.id
                     type_of_entity = "group"
-                chat_names[chat.id] = {"number": number, "title":chat.name or chat.title, "type_of_entity":type_of_entity, "unread_count":chat.unread_count}
+                chat_names[chat.id] = {"number": number, "title": chat.name or chat.title,
+                                       "type_of_entity": type_of_entity, "unread_count": chat.unread_count}
             return chat_names
 
     chats = asyncio.run(fetch_recent_chats(limit=limit))

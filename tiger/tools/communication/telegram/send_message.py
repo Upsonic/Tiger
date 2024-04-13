@@ -14,6 +14,7 @@ def send_message(number: str, message: str) -> str:
     result = asyncio.run(send_message(number, message))
     return result
 
+
 tool_name = "communication.telegram.send_message"
 tool_obj = send_message
 tool_requirements = ["telethon==1.34.0"]

@@ -3,7 +3,7 @@ import time
 import asyncio
 
 
-def delete_message(number:str, message:str):
+def delete_message(number: str, message: str):
     import nest_asyncio
     nest_asyncio.apply()
 
@@ -12,6 +12,7 @@ def delete_message(number:str, message:str):
             await client.delete_messages(num, message)
 
     asyncio.run(del_message(number, message))
+
 
 tool_name = "communication.telegram.delete_message"
 tool_obj = delete_message
