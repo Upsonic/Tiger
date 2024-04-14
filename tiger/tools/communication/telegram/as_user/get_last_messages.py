@@ -22,6 +22,19 @@ def get_last_messages(number: str, limit=100):
             messages = await client.get_messages(num, limit=limit)
             the_messages_list = {}
             for each_ms in messages:
+                number = ""
+                type_of_entity = ""
+                try:
+                    number = (await client.get_entity(each_ms.peer_id.user_id)).phone
+                    type_of_entity = "user"
+                except:
+                    try:
+                        number = (await client.get_entity(each_ms.peer_id.user_id)).username
+                        type_of_entity = "channel"
+                    except:
+                        number = (await client.get_entity(each_ms.peer_id.user_id)).id
+                        type_of_entity = "group"
+
                 the_messages_list[each_ms.id] = {
                     "id":
                     each_ms.id,
@@ -29,9 +42,10 @@ def get_last_messages(number: str, limit=100):
                     each_ms.text,
                     "date":
                     each_ms.date,
-                    "sender":
-                    (await
-                     client.get_entity(each_ms.peer_id.user_id)).username,
+                    "number":
+                    number,
+                    "type_of_entity":
+                    type_of_entity,
                 }
             return the_messages_list
 
