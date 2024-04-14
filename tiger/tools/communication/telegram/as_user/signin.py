@@ -22,6 +22,6 @@ def signin():
     return result
 
 
-tool_name = "communication.telegram.as_user.signin"
+tool_name = "communication.telegram.as_user.signin" + "__user"
 tool_obj = signin
 tool_requirements = ["telethon==1.34.0"]
