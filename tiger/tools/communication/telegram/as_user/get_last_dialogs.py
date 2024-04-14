@@ -24,15 +24,18 @@ def get_last_dialogs(limit=100):
                 number = ""
                 type_of_entity = ""
                 if chat.is_user:
-                    number = chat.entity.phone
+                    number = chat.entity.phone or chat.entity.username
                     type_of_entity = "user"
                 if chat.is_channel:
-                    number = chat.entity.username or chat.entity.id
+                    number = chat.entity.username
                     type_of_entity = "channel"
                 if chat.is_group:
                     number = chat.entity.id
                     type_of_entity = "group"
-                chat_names[chat.id] = {
+
+                if number == None:
+                    number = chat.entity.id
+                chat_names[str(chat.id)] = {
                     "number": number,
                     "title": chat.name or chat.title,
                     "type_of_entity": type_of_entity,
