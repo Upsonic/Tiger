@@ -4,7 +4,7 @@ import time
 from telethon.sync import TelegramClient
 
 
-def send_message(number: str, message: str) -> str:
+def delete_message(number: str, message: str):
     """
 
     :param number: str:
@@ -15,16 +15,15 @@ def send_message(number: str, message: str) -> str:
 
     nest_asyncio.apply()
 
-    async def send_message(number, message):
+    async def del_message(num, message):
         async with TelegramClient(
                 "upsonic_tiger", 21659296,
                 "7d0ebd20538d88ab0629eb926acb08f7") as client:
-            return (await client.send_message(number, message)).id
+            await client.delete_messages(num, message)
 
-    result = asyncio.run(send_message(number, message))
-    return result
+    asyncio.run(del_message(number, message))
 
 
-tool_name = "communication.telegram.send_message"
-tool_obj = send_message
+tool_name = "communication.telegram.as_user.delete_message"
+tool_obj = delete_message
 tool_requirements = ["telethon==1.34.0"]

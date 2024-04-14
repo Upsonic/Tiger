@@ -44,6 +44,6 @@ def get_last_dialogs(limit=100):
     return chats
 
 
-tool_name = "communication.telegram.get_last_dialogs"
+tool_name = "communication.telegram.as_user.get_last_dialogs"
 tool_obj = get_last_dialogs
 tool_requirements = ["telethon==1.34.0"]

@@ -39,6 +39,6 @@ def get_last_messages(number: str, limit=100):
     return messages
 
 
-tool_name = "communication.telegram.get_last_messages"
+tool_name = "communication.telegram.as_user.get_last_messages"
 tool_obj = get_last_messages
 tool_requirements = ["telethon==1.34.0"]
