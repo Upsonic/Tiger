@@ -16,7 +16,7 @@ def signin():
                 "7d0ebd20538d88ab0629eb926acb08f7") as client:
             message = await client.send_message("me", "upsonic_tiger_test")
             await time.sleep(2)
-            await message.delelete
+            await message.delete()
 
     result = asyncio.run(send_message())
     return result
