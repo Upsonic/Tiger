@@ -11,13 +11,14 @@
   <a href="#crewai-integration">crewAI Integration</a> •
   <a href="#langchain-integration">LangChain Integration</a> •
   <a href="#autogen-integration">AutoGen Integration</a> •
+    <a href="#signin-to-telegram">Telegram Integration</a> •
 </p>
 
 <p align="center">
 <b>Sources:</b>
-  <a href="https://arxiv.org/abs/2304.08354">Currently Tools</a> •
-  <a href="https://bmtools.readthedocs.io/en/main/">Custom Tools (On-Prem Docker)</a> •
-  <a href="https://huggingface.co/spaces/congxin95/BMTools-demo">Public Dashboard</a> •
+  <a href="#currently-tools">Currently Tools</a> •
+  <a href="#creating-your-own-tiger">Custom Tools (On-Prem Docker)</a> •
+  <a href="#public-dashboard">Public Dashboard</a> •
 </p>
 
 <br>
@@ -82,6 +83,15 @@ We are working on Upsonic and the tools that inside the `tools` folder is sendin
   - delete
   - index
   - reset
+
+- Communication
+  - telegram
+    - as_user
+      - delete_message
+      - get_last_dialogs
+      - get_last_messages
+      - send_message
+      - signin
 
 If you want to add functions to public and strongest Tiger you can see to [Adding Tools](#adding-tools) section.
 
@@ -233,6 +243,15 @@ user_proxy.initiate_chat(
         chatbot,
         message="What is Upsonic.co",
     )
+```
+
+## Signin to Telegram
+The user who wants to use telegram functionalities in their LLM agents must trig the signin function before all. For this you can use this function and its will ask for phone number and verification code.
+
+```python
+from upsonic import Tiger
+
+Tiger().get("communication.telegram.as_user.signin__user")()
 ```
 
 ## Adding Tools
