@@ -128,6 +128,10 @@ Thanks to Upsonic we just write the codes and its gives us an storage system wit
 # crewAI Integration
 Tiger project aim is being available for most popular agent framworks like `crewAI`. In this example you can see the easiest tool integration for an AI agent. We are asking for who is Onur Atakan ULUSOY and waits.
 
+```console
+pip3 install crewai 'crewai[tools]'
+```
+
 ```python
 # Geting the tiger tools
 from upsonic import Tiger
@@ -145,6 +149,7 @@ from crewai import Agent, Task, Crew, Process
 researcher = Agent(
   role='Senior Research Analyst',
   goal='Uncover cutting-edge developments in AI and data science',
+  backstory="You are graduated from Research section of University",
   verbose=True,
   allow_delegation=False,
   tools=tools,
@@ -161,16 +166,19 @@ task1 = Task(
 
 crew = Crew(
   agents=[researcher],
-  tasks=[task1, task2, task3],
+  tasks=[task1],
   verbose=2,
 )
 
 
 result = crew.kickoff()
-
 ```
 
 # LangChain Integration
+
+```console
+pip3 install langchain langchain-openai
+```
 
 Tiger is able to make a collabration for sharing tools with LangChain agents with this your agents will able to use Tiger functions. In this example we are asking for an multiplation question and the agent will use the tiger  and after that its write a python code and tiger will give the result in behind. With this agent will able to make mathematical operations in just two lines of code.
 
@@ -198,6 +206,10 @@ agent_executor.invoke({"input": "What is the result of 15231 * 64231"})
 ```
 
 # AutoGen Integration
+
+```console
+pip3 install pyautogen
+```
 
 Tiger is also have a integration with AutoGen agents. You can put a tiger to your AutoGen agents. In this examples we will use the 'interpreter.python' module and with this your autogen agent able to run and view result of python codes. With this your agent will able to wait 2 second as we request.
 
