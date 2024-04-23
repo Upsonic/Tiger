@@ -4,10 +4,10 @@ import time
 from telethon.sync import TelegramClient
 
 
-def send_message(number: str, message: str) -> str:
+def send_message(number: int, message: str) -> str:
     """
 
-    :param number: str:
+    :param number: int:
     :param message: str:
 
     """
