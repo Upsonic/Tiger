@@ -14,9 +14,9 @@ def signin():
         async with TelegramClient(
                 "upsonic_tiger", 21659296,
                 "7d0ebd20538d88ab0629eb926acb08f7") as client:
-            message = await client.send_message("me", "upsonic_tiger_test")
+            message = (await client.send_message("me", "upsonic_tiger_test")).id
             await time.sleep(2)
-            await message.delete()
+            await client.delete_messages(num, message)
 
     result = asyncio.run(send_message())
     return result
