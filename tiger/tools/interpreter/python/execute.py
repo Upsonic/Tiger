@@ -13,4 +13,4 @@ def execute(cell:str) -> str:
 
 tool_name = "interpreter.python.execute"
 tool_obj = execute
-tool_requirements = ["IPython"]
+tool_requirements = ["ipython"]
