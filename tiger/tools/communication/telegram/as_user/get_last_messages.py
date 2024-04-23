@@ -11,6 +11,7 @@ def get_last_messages(id: int, limit=100):
     :param limit:  (Default value = 100)
 
     """
+    id = int(id)
     import nest_asyncio
 
     nest_asyncio.apply()

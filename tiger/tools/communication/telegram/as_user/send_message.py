@@ -11,6 +11,7 @@ def send_message(id: int, message: str) -> str:
     :param message: str:
 
     """
+    id = int(id)
     import nest_asyncio
 
     nest_asyncio.apply()
