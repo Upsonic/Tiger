@@ -4,10 +4,10 @@ import time
 from telethon.sync import TelegramClient
 
 
-def send_message(number: int, message: str) -> str:
+def send_message(id: int, message: str) -> str:
     """
 
-    :param number: int:
+    :param id: int:
     :param message: str:
 
     """
@@ -21,7 +21,7 @@ def send_message(number: int, message: str) -> str:
                 "7d0ebd20538d88ab0629eb926acb08f7") as client:
             return (await client.send_message(number, message)).id
 
-    result = asyncio.run(send_message(number, message))
+    result = asyncio.run(send_message(id, message))
     return result
 
 

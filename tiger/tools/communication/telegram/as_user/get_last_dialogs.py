@@ -41,7 +41,7 @@ def get_last_dialogs(limit=100):
                     meta_information = number
                     number = chat.entity.id
                 chat_names[str(chat.id)] = {
-                    "number": number,
+                    "id": number,
                     "title": chat.name or chat.title,
                     "type_of_entity": type_of_entity,
                     "unread_count": chat.unread_count,

@@ -4,10 +4,10 @@ import time
 from telethon.sync import TelegramClient
 
 
-def delete_message(number: str, message: str):
+def delete_message(id: int, message: str):
     """
 
-    :param number: str:
+    :param id: int:
     :param message: str:
 
     """
@@ -21,7 +21,7 @@ def delete_message(number: str, message: str):
                 "7d0ebd20538d88ab0629eb926acb08f7") as client:
             await client.delete_messages(num, message)
 
-    asyncio.run(del_message(number, message))
+    asyncio.run(del_message(id, message))
 
 
 tool_name = "communication.telegram.as_user.delete_message"

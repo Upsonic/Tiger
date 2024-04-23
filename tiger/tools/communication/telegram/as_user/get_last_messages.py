@@ -4,10 +4,10 @@ import time
 from telethon.sync import TelegramClient
 
 
-def get_last_messages(number: str, limit=100):
+def get_last_messages(id: int, limit=100):
     """
 
-    :param number: str:
+    :param id: int:
     :param limit:  (Default value = 100)
 
     """
@@ -49,7 +49,7 @@ def get_last_messages(number: str, limit=100):
                 }
             return the_messages_list
 
-    messages = asyncio.run(get_messages(number, limit))
+    messages = asyncio.run(get_messages(id, limit))
     return messages
 
 
