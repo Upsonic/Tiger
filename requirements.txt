@@ -1,5 +1,5 @@
 importlib_metadata
-IPython
+ipython
 google==3.0.0
 beautifulsoup4==4.12.3
 requests
