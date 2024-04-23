@@ -35,11 +35,17 @@ def get_last_dialogs(limit=100):
 
                 if number == None:
                     number = chat.entity.id
+
+                meta_information = None
+                if chat.entity.id != number:
+                    meta_information = number
+                    number = chat.entity.id
                 chat_names[str(chat.id)] = {
                     "number": number,
                     "title": chat.name or chat.title,
                     "type_of_entity": type_of_entity,
                     "unread_count": chat.unread_count,
+                    "meta_information": meta_information,
                 }
             return chat_names
 
