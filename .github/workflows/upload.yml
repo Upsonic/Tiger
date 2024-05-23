@@ -6,6 +6,7 @@ on:
       - 'tiger/tools/**'
       - 'tiger/public_tiger.py'
       - '.github/workflows/upload.yml'
+      - 'requirements.txt'
     branches:
       - master
   workflow_dispatch:
