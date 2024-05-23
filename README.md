@@ -76,6 +76,8 @@ We are working on Upsonic and the tools that inside the `tools` folder is sendin
   - os_name
   - architecture
   - python_version
+  - clipboard
+    - copy
 
 - Knowledge
   - put
