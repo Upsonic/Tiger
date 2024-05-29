@@ -56,6 +56,13 @@ pip3 install upsonic
 
 We are working on Upsonic and the tools that inside the `tools` folder is sending to public tiger in each release. We are aiming to create tools without any api key and just like normal human events like searching on google with mouse, keyboard and browser.
 
+- App
+  - open
+  - close
+
+- browser
+  - open_url
+
 - Interpreter
 
   - python
