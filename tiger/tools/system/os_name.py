@@ -1,6 +1,7 @@
-import platform
 
 def os_name():
+    import platform
+
     system_name = platform.system()
     if system_name == 'Windows':
         return 'Windows'

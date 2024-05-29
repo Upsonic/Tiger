@@ -1,7 +1,8 @@
-import pyperclip
+
 
 
 def copy(text):
+    import pyperclip
     pyperclip.copy(text)
 
 

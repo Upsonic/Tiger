@@ -1,7 +1,8 @@
-import platform
 
 
 def architecture():
+    import platform
+
     return platform.architecture()[0]
 
 

@@ -1,7 +1,8 @@
-from IPython import get_ipython
 
 
 def execute(cell:str) -> str:
+    from IPython import get_ipython
+
     ipython = get_ipython()
     result = ipython.run_cell(cell)
     log = str(result.result)

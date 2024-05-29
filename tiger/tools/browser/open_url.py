@@ -1,4 +1,3 @@
-import webbrowser
 
 
 def open_url(url) -> bool:
@@ -7,6 +6,8 @@ def open_url(url) -> bool:
     :param url: str:
 
     """
+    import webbrowser
+
     try:
         webbrowser.open(url)
         return True

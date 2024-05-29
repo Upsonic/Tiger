@@ -1,8 +1,3 @@
-import asyncio
-import time
-
-from telethon.sync import TelegramClient
-
 
 def send_message(id: int, message: str) -> str:
     """
@@ -11,6 +6,12 @@ def send_message(id: int, message: str) -> str:
     :param message: str:
 
     """
+    import asyncio
+    import time
+
+    from telethon.sync import TelegramClient
+
+
     id = int(id)
     import nest_asyncio
 

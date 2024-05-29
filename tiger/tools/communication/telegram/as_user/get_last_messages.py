@@ -1,8 +1,3 @@
-import asyncio
-import time
-
-from telethon.sync import TelegramClient
-
 
 def get_last_messages(id: int, limit=100):
     """
@@ -11,6 +6,12 @@ def get_last_messages(id: int, limit=100):
     :param limit:  (Default value = 100)
 
     """
+    import asyncio
+    import time
+
+    from telethon.sync import TelegramClient
+
+
     id = int(id)
     import nest_asyncio
 

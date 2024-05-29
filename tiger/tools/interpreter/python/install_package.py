@@ -1,8 +1,9 @@
-from subprocess import check_call
-from importlib_metadata import distribution
-
 
 def install_package(package:str) -> bool:
+    from subprocess import check_call
+    from importlib_metadata import distribution
+
+
     try:
         check_call(["pip", "install", package])
         distribution(package)

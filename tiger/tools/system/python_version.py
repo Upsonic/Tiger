@@ -1,7 +1,8 @@
-import platform
 
 
 def python_version():
+    import platform
+
     return platform.python_version()
 
 

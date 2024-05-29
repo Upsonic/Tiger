@@ -1,6 +1,7 @@
-from googlesearch import search as gsearch
+
 
 def google(query:str, max_number:int=20) -> list:
+    from googlesearch import search as gsearch
     return list(gsearch(query, stop=max_number))
 
 

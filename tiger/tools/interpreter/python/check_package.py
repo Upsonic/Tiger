@@ -1,6 +1,7 @@
-from importlib_metadata import distribution, PackageNotFoundError
 
 def check_package(package:str) -> bool:
+    from importlib_metadata import distribution, PackageNotFoundError
+
     try:
         distribution(package)
         print(f"'{package}' is installed.")

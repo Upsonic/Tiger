@@ -1,9 +1,3 @@
-import inspect
-import os
-
-import upsonic
-from tinydb import Query
-from tinydb import TinyDB
 
 
 def pull(knowledge_name: str) -> str:
@@ -12,6 +6,14 @@ def pull(knowledge_name: str) -> str:
     :param knowledge_name: str:
 
     """
+    import inspect
+    import os
+
+    import upsonic
+    from tinydb import Query
+    from tinydb import TinyDB
+
+
     folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
                           "upsonic_tiger_knowledge.json")
     db = TinyDB(folder)

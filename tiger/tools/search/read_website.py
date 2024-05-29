@@ -1,10 +1,11 @@
-import requests
-
-from bs4 import BeautifulSoup
-import re
 
 
 def read_website(url: str, max_content_lenght: int = 5000) -> dict:
+    import requests
+
+    from bs4 import BeautifulSoup
+    import re
+
     html = requests.get(url).text
     soup = BeautifulSoup(html)
     meta_properties = [

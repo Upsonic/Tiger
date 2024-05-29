@@ -1,13 +1,14 @@
-import inspect
-import os
 
-import upsonic
-from tinydb import Query
-from tinydb import TinyDB
 
 
 def reset() -> None:
     """ """
+    import inspect
+    import os
+
+    import upsonic
+    from tinydb import Query
+    from tinydb import TinyDB    
     folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
                           "upsonic_tiger_knowledge.json")
     db = TinyDB(folder)

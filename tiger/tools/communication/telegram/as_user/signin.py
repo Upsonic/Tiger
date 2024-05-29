@@ -1,11 +1,12 @@
-import asyncio
-import time
-
-from telethon.sync import TelegramClient
-
 
 def signin():
     """ """
+    import asyncio
+    import time
+
+    from telethon.sync import TelegramClient
+
+
     import nest_asyncio
 
     nest_asyncio.apply()

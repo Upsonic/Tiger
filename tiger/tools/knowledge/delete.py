@@ -1,9 +1,4 @@
-import inspect
-import os
 
-import upsonic
-from tinydb import Query
-from tinydb import TinyDB
 
 
 def delete(knowledge_name: str) -> bool:
@@ -12,6 +7,13 @@ def delete(knowledge_name: str) -> bool:
     :param knowledge_name: str:
 
     """
+    import inspect
+    import os
+
+    import upsonic
+    from tinydb import Query
+    from tinydb import TinyDB
+
     folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
                           "upsonic_tiger_knowledge.json")
     db = TinyDB(folder)

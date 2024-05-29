@@ -1,9 +1,4 @@
-import inspect
-import os
 
-import upsonic
-from tinydb import Query
-from tinydb import TinyDB
 
 
 def put(knowledge_name: str, description: str) -> bool:
@@ -13,6 +8,12 @@ def put(knowledge_name: str, description: str) -> bool:
     :param description: str:
 
     """
+    import inspect
+    import os
+
+    import upsonic
+    from tinydb import Query
+    from tinydb import TinyDB    
     folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
                           "upsonic_tiger_knowledge.json")
     db = TinyDB(folder)

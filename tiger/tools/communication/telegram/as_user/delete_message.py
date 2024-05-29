@@ -1,7 +1,3 @@
-import asyncio
-import time
-
-from telethon.sync import TelegramClient
 
 
 def delete_message(id: int, message: str):
@@ -11,6 +7,11 @@ def delete_message(id: int, message: str):
     :param message: str:
 
     """
+    import asyncio
+    import time
+
+    from telethon.sync import TelegramClient
+
     id = int(id)
     import nest_asyncio
 
