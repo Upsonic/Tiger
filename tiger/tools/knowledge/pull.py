@@ -1,5 +1,3 @@
-
-
 def pull(knowledge_name: str) -> str:
     """
 
@@ -13,9 +11,9 @@ def pull(knowledge_name: str) -> str:
     from tinydb import Query
     from tinydb import TinyDB
 
-
-    folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
-                          "upsonic_tiger_knowledge.json")
+    folder = os.path.join(
+        os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
+    )
     db = TinyDB(folder)
     Knowledge = Query()
     result = db.search(Knowledge.knowledge_name == knowledge_name)

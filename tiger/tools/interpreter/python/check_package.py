@@ -1,5 +1,4 @@
-
-def check_package(package:str) -> bool:
+def check_package(package: str) -> bool:
     from importlib_metadata import distribution, PackageNotFoundError
 
     try:
@@ -9,6 +8,7 @@ def check_package(package:str) -> bool:
     except PackageNotFoundError:
         print(f"'{package}' is not installed.")
         return False
+
 
 tool_name = "interpreter.python.check_package"
 tool_obj = check_package

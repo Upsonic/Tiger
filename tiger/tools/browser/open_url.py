@@ -1,5 +1,3 @@
-
-
 def open_url(url) -> bool:
     """
 
@@ -13,7 +11,6 @@ def open_url(url) -> bool:
         return True
     except:
         return False
-
 
 
 tool_name = "browser.open_url"

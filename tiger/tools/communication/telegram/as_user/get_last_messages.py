@@ -1,4 +1,3 @@
-
 def get_last_messages(id: int, limit=100):
     """
 
@@ -7,10 +6,8 @@ def get_last_messages(id: int, limit=100):
 
     """
     import asyncio
-    import time
 
     from telethon.sync import TelegramClient
-
 
     id = int(id)
     import nest_asyncio
@@ -19,8 +16,8 @@ def get_last_messages(id: int, limit=100):
 
     async def get_messages(num, limit):
         async with TelegramClient(
-                "upsonic_tiger", 21659296,
-                "7d0ebd20538d88ab0629eb926acb08f7") as client:
+            "upsonic_tiger", 21659296, "7d0ebd20538d88ab0629eb926acb08f7"
+        ) as client:
             messages = await client.get_messages(num, limit=limit)
             the_messages_list = {}
             our_entity_id = (await client.get_me()).id
@@ -42,18 +39,12 @@ def get_last_messages(id: int, limit=100):
                 if our_entity_id == the_entity.id:
                     is_me = True
                 the_messages_list[each_ms.id] = {
-                    "id":
-                    each_ms.id,
-                    "message":
-                    each_ms.text,
-                    "date":
-                    each_ms.date,
-                    "number":
-                    number,
-                    "type_of_entity":
-                    type_of_entity,
-                    "is_me":
-                    is_me,
+                    "id": each_ms.id,
+                    "message": each_ms.text,
+                    "date": each_ms.date,
+                    "number": number,
+                    "type_of_entity": type_of_entity,
+                    "is_me": is_me,
                 }
             return the_messages_list
 

@@ -1,5 +1,3 @@
-
-
 def python_version():
     import platform
 

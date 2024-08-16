@@ -1,5 +1,3 @@
-
-
 def read_website(url: str, max_content_lenght: int = 5000) -> dict:
     try:
         import requests
@@ -35,11 +33,15 @@ def read_website(url: str, max_content_lenght: int = 5000) -> dict:
         content = re.sub(r" +", " ", content)
         content = re.sub(r"[\n ]{3,}", "\n\n", content)
         content = content.strip()
-        return {"meta": meta, "title": title, "content": content[:max_content_lenght], "sub_links": links}
+        return {
+            "meta": meta,
+            "title": title,
+            "content": content[:max_content_lenght],
+            "sub_links": links,
+        }
 
     except:
-        return "An exception occurred"        
-
+        return "An exception occurred"
 
 
 tool_name = "search.read_website"

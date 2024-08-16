@@ -1,5 +1,3 @@
-
-
 def architecture():
     import platform
 

@@ -1,6 +1,3 @@
-
-
-
 def delete(knowledge_name: str) -> bool:
     """
 
@@ -14,8 +11,9 @@ def delete(knowledge_name: str) -> bool:
     from tinydb import Query
     from tinydb import TinyDB
 
-    folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
-                          "upsonic_tiger_knowledge.json")
+    folder = os.path.join(
+        os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
+    )
     db = TinyDB(folder)
     try:
         Knowledge = Query()

@@ -1,10 +1,7 @@
-
-
-
 def copy(text):
     import pyperclip
-    pyperclip.copy(text)
 
+    pyperclip.copy(text)
 
 
 tool_name = "system.clipboard.copy"

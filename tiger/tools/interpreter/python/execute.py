@@ -1,6 +1,4 @@
-
-
-def execute(cell:str) -> str:
+def execute(cell: str) -> str:
     try:
         from IPython import get_ipython
 
@@ -14,7 +12,7 @@ def execute(cell:str) -> str:
         return log
     except Exception as e:
         return e
-        
+
 
 tool_name = "interpreter.python.execute"
 tool_obj = execute

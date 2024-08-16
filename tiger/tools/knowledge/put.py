@@ -1,6 +1,3 @@
-
-
-
 def put(knowledge_name: str, description: str) -> bool:
     """
 
@@ -13,20 +10,20 @@ def put(knowledge_name: str, description: str) -> bool:
 
     import upsonic
     from tinydb import Query
-    from tinydb import TinyDB    
-    folder = os.path.join(os.path.dirname(inspect.getfile(upsonic)),
-                          "upsonic_tiger_knowledge.json")
+    from tinydb import TinyDB
+
+    folder = os.path.join(
+        os.path.dirname(inspect.getfile(upsonic)), "upsonic_tiger_knowledge.json"
+    )
     db = TinyDB(folder)
     try:
         Knowledge = Query()
         if db.search(Knowledge.knowledge_name == knowledge_name):
-            db.update({"description": description},
-                      Knowledge.knowledge_name == knowledge_name)
+            db.update(
+                {"description": description}, Knowledge.knowledge_name == knowledge_name
+            )
         else:
-            db.insert({
-                "knowledge_name": knowledge_name,
-                "description": description
-            })
+            db.insert({"knowledge_name": knowledge_name, "description": description})
         return True
     except:
         return False

@@ -1,4 +1,3 @@
-
 def open(app_name) -> bool:
     """
 
@@ -7,11 +6,11 @@ def open(app_name) -> bool:
     """
     try:
         from AppOpener import open
+
         open(app_name, throw_error=True)
         return True
     except:
         return False
-
 
 
 tool_name = "app.open"

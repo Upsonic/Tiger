@@ -1,9 +1,9 @@
 from upsonic import Tiger_Admin
 
 
-
 import os
 from dotenv import load_dotenv
+
 load_dotenv(dotenv_path=".env")
 
 api_url = os.getenv("API_URL")
@@ -29,17 +29,13 @@ def get_file_dict(directory):
                 file_dict[filepath] = {
                     "tool_name": foo.tool_name,
                     "tool_obj": foo.tool_obj,  # storing the function's name as string
-                    "tool_requirements": foo.tool_requirements
+                    "tool_requirements": foo.tool_requirements,
                 }
 
     return file_dict
 
 
-
 directory = os.path.join(os.path.dirname(__file__), "tools")
-
-import inspect
-import dill
 
 
 currently_index = tiger_client.get_all()
@@ -54,7 +50,10 @@ for each in get_file_dict(directory).values():
 
     tiger_client.set(tool_name, tool_obj)
     tiger_client.clear_requirements(tool_name)
-    [tiger_client.add_requirement(tool_name, requirement) for requirement in tool_requirements]
+    [
+        tiger_client.add_requirement(tool_name, requirement)
+        for requirement in tool_requirements
+    ]
     print(tool_name)
 
 

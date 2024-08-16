@@ -1,5 +1,3 @@
-
-
 def get_last_dialogs(limit=100):
     """
 
@@ -7,7 +5,6 @@ def get_last_dialogs(limit=100):
 
     """
     import asyncio
-    import time
 
     from telethon.sync import TelegramClient
 
@@ -17,8 +14,8 @@ def get_last_dialogs(limit=100):
 
     async def fetch_recent_chats(limit):
         async with TelegramClient(
-                "upsonic_tiger", 21659296,
-                "7d0ebd20538d88ab0629eb926acb08f7") as client:
+            "upsonic_tiger", 21659296, "7d0ebd20538d88ab0629eb926acb08f7"
+        ) as client:
             recent_chats = await client.get_dialogs(limit=limit)
             chat_names = {}
             for chat in recent_chats:

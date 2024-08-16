@@ -1,5 +1,3 @@
-
-
 def delete_message(id: int, message: str):
     """
 
@@ -8,7 +6,6 @@ def delete_message(id: int, message: str):
 
     """
     import asyncio
-    import time
 
     from telethon.sync import TelegramClient
 
@@ -19,8 +16,8 @@ def delete_message(id: int, message: str):
 
     async def del_message(num, message):
         async with TelegramClient(
-                "upsonic_tiger", 21659296,
-                "7d0ebd20538d88ab0629eb926acb08f7") as client:
+            "upsonic_tiger", 21659296, "7d0ebd20538d88ab0629eb926acb08f7"
+        ) as client:
             await client.delete_messages(num, message)
 
     asyncio.run(del_message(id, message))

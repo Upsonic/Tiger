@@ -1,4 +1,3 @@
-
 def signin():
     """ """
     import asyncio
@@ -6,15 +5,14 @@ def signin():
 
     from telethon.sync import TelegramClient
 
-
     import nest_asyncio
 
     nest_asyncio.apply()
 
     async def send_message():
         async with TelegramClient(
-                "upsonic_tiger", 21659296,
-                "7d0ebd20538d88ab0629eb926acb08f7") as client:
+            "upsonic_tiger", 21659296, "7d0ebd20538d88ab0629eb926acb08f7"
+        ) as client:
             message = (await client.send_message("me", "upsonic_tiger_test")).id
             time.sleep(2)
             await client.delete_messages("me", message)
