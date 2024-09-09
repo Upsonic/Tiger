@@ -44,7 +44,7 @@ With Tiger, your LLM agents can write and execute code, use search engines, mana
 
 # Setup
 
-Tiger projects have a general usage public library at [tiger.upsonic.co](https://tiger.upsonic.co). Its include the tools that in `tools` library. For usage this you can use the standart connection that in upsonic python library. After installing the `upsonic` library we will use the Tiger object wand integrate to your agents.
+Tiger projects have a general usage public library at [tiger.upsonic.co](https://tiger.upsonic.co). Its include the tools that in `tools` library. For usage this you can use the standard connection that in upsonic python library. After installing the `upsonic` library we will use the Tiger object wand integrate to your agents.
 
 - Tiger requires equal or higher python version to 3.8
 
