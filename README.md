@@ -1,5 +1,7 @@
 
-# No Crypto | Scam Alarm
+# We dont have any Crypto Project, they are totaly SCAM
+
+
 ## This project is not releated with any crypto currencies.
 
 
