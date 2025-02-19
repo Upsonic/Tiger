@@ -1,21 +1,4 @@
 
-# We do NOT and WILL not have any Crypto Projects, they are a complete SCAM
-
-
-## This project is not releated with any crypto currencies.
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
 
 
 <div align= "center">
